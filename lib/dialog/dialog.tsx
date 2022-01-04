@@ -2,6 +2,7 @@ import React from 'react';
 import './dialog.scss'
 import {Icon} from '../index';
 import {scopedClassMaker} from '../scopedClassMaker';
+import {Button} from '../button/button';
 
 const scopedClass = scopedClassMaker('hugsyui-dialog')
 const sc = scopedClass
@@ -24,8 +25,8 @@ const Dialog: React.FC<Props> = (props) => {
             {props.children}
           </main>
           <footer className={sc('footer')}>
-            <button>ok</button>
-            <button>cancel</button>
+            <Button>取消</Button>
+            <Button>确认</Button>
           </footer>
         </div>
       </> :
