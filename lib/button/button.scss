@@ -1,0 +1,17 @@
+@import '../helper.scss';
+
+.hugsyui-button {
+  border: none;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: $color-button;
+  color: white;
+  margin: 0 4px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,8 +1,12 @@
 import React from 'react';
+import {Button} from './button';
 
 const ButtonExample: React.FC = () => {
   return (
-    <div>hello world</div>
+    <>
+      <Button>ok</Button>
+      <Button>cancel</Button>
+    </>
   );
 };
 
