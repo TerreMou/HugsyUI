@@ -1,5 +1,6 @@
 import React from 'react';
-import './importIcons.js'
+import './importIcons.js';
+import './icon.scss';
 
 interface IconProps {
   name: string;
@@ -7,11 +8,9 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = (props) => {
   return (
-    <span>
-      <svg>
-        <use xlinkHref={`#${props.name}`}/>
-      </svg>
-    </span>
+    <svg className="hugsyui-icon">
+      <use xlinkHref={`#${props.name}`}/>
+    </svg>
   );
 };
 
