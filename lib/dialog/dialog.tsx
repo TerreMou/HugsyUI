@@ -1,6 +1,6 @@
 import React from 'react';
 import './dialog.scss'
-import {Icon} from '../icon/icon';
+import {Icon} from '../index';
 import {scopedClassMaker} from '../scopedClassMaker';
 
 const scopedClass = scopedClassMaker('hugsyui-dialog')
