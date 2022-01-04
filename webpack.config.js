@@ -1,14 +1,14 @@
-const path = require('path');
+const path = require('path')
 module.exports = {
   entry: {
-    hugsyui: './lib/index.tsx'
+    index: './lib/index.tsx'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'HugsyUI',
+    library: 'FUI',
     libraryTarget: 'umd',
   },
   module: {
@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
-      },
+      }
     ]
   },
-};
+}
