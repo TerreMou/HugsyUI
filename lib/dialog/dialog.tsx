@@ -9,7 +9,7 @@ const sc = scopedClass;
 
 interface Props {
   visible: boolean;
-  button: Array<ReactElement>;
+  button?: Array<ReactElement>;
   onClose: React.MouseEventHandler;
   closeOnClickMask?: boolean;
 }
@@ -38,7 +38,7 @@ const Dialog: React.FC<Props> = (props) => {
           {props.children}
         </main>
         <footer className={sc('footer')}>
-          {props.button.map((btn, index) =>
+          {props.button && props.button.map((btn, index) =>
             React.cloneElement(btn, {key: index})
           )}
         </footer>
@@ -55,4 +55,18 @@ Dialog.defaultProps = {
   closeOnClickMask: false
 };
 
-export {Dialog};
+const alert = (content: string) => {
+  const component =
+    <Dialog visible={true} onClose={() => {
+      ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+      ReactDOM.unmountComponentAtNode(div);
+      div.remove();
+    }}>
+      {content}
+    </Dialog>;
+  const div = document.createElement('div');
+  document.body.appendChild(div);
+  ReactDOM.render(component, div);
+};
+
+export {Dialog, alert};

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Dialog} from './dialog';
+import {Dialog, alert} from './dialog';
 import {Button} from '../button/button';
 
 const DialogExample: React.FC = () => {
@@ -35,6 +35,10 @@ const DialogExample: React.FC = () => {
                 }>
           <strong>example2</strong>
         </Dialog>
+      </div>
+      <div>
+        <h1>example 3</h1>
+        <Button onClick={() => alert('hello Terre')}>alert</Button>
       </div>
     </>
   )
