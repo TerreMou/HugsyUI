@@ -2,6 +2,7 @@ import React, {ReactElement} from 'react';
 import './dialog.scss';
 import {Icon} from '../index';
 import {scopedClassMaker} from '../scopedClassMaker';
+import ReactDOM from 'react-dom';
 
 const scopedClass = scopedClassMaker('hugsyui-dialog');
 const sc = scopedClass;
@@ -22,30 +23,31 @@ const Dialog: React.FC<Props> = (props) => {
       props.onClose(e);
     }
   };
+  const x = props.visible ?
+    <>
+      <div className={sc('mask')}
+           onClick={onClickMask}/>
+      <div className={sc()}>
+        <div className={sc('close')}
+             onClick={onClickClose}
+        >
+          <Icon name="close"/>
+        </div>
+        <header className={sc('header')}>提示</header>
+        <main className={sc('main')}>
+          {props.children}
+        </main>
+        <footer className={sc('footer')}>
+          {props.button.map((btn, index) =>
+            React.cloneElement(btn, {key: index})
+          )}
+        </footer>
+      </div>
+    </> :
+    null;
 
   return (
-    props.visible ?
-      <>
-        <div className={sc('mask')}
-             onClick={onClickMask}/>
-        <div className={sc()}>
-          <div className={sc('close')}
-               onClick={onClickClose}
-          >
-            <Icon name="close"/>
-          </div>
-          <header className={sc('header')}>提示</header>
-          <main className={sc('main')}>
-            {props.children}
-          </main>
-          <footer className={sc('footer')}>
-            {props.button.map((btn, index) =>
-              React.cloneElement(btn, {key: index})
-            )}
-          </footer>
-        </div>
-      </> :
-      null
+    ReactDOM.createPortal(x, document.body)
   );
 };
 
