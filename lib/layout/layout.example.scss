@@ -1,0 +1,37 @@
+@import '../helper.scss';
+
+.header, .footer {
+  height: 40px;
+  background: lighten($color-main, 12%);
+  margin: 2px 0;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  background: $color-main;
+  margin: 2px 0;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside {
+  background: lighten($color-main, 4%);
+  width: 100px;
+  margin: 2px 0;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside + .content, .content + .aside, .aside + .hugsyui-layout {
+  margin-left: 4px;
+}
