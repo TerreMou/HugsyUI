@@ -1,0 +1,38 @@
+@import '../helper.scss';
+
+.hugsyui-layout {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+
+  &-header {
+    background: lighten($color-main, 12);
+  }
+
+  &-content {
+    flex-grow: 1;
+    background: $color-main;
+
+  }
+
+  &-footer {
+    background: lighten($color-main, 12);
+  }
+
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+
+  &-aside {
+    background: lighten($color-main, 4);
+  }
+
+  &-hasAside {
+    flex-direction: row;
+    .hugsyui-layout {
+      flex-direction: column;
+    }
+  }
+}
