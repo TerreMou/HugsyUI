@@ -1,7 +1,7 @@
 import React, {ReactElement, ReactNode} from 'react';
 import './dialog.scss';
 import {Icon} from '../index';
-import {scopedClassMaker} from '../scopedClassMaker';
+import {scopedClassMaker} from '../helpers/scopedClassMaker';
 import ReactDOM from 'react-dom';
 import {Button} from '../button/button';
 
