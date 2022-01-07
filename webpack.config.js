@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 module.exports = {
   entry: {
     index: './lib/index.tsx'
@@ -24,7 +24,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg|git)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
-}
+};

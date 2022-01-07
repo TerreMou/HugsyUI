@@ -25,3 +25,7 @@ const Layout: React.FC<Props> = (props) => {
 };
 
 export {Layout};
+export {Header} from './header';
+export {Content} from './content';
+export {Footer} from './footer';
+export {Aside} from './aside';

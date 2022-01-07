@@ -4,18 +4,9 @@
   display: flex;
   flex-direction: column;
 
-  &-header {
-  }
-
   &-content {
     flex-grow: 1;
 
-  }
-
-  &-footer {
-  }
-
-  &-aside {
   }
 
   & & {
@@ -23,10 +14,8 @@
     flex-direction: row;
   }
 
-
   &-hasAside {
     flex-direction: row;
-
     .hugsyui-layout {
       flex-direction: column;
     }

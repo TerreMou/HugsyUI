@@ -12,44 +12,44 @@ const LayoutExample: React.FC = () => {
       <div>
         <h1>example 1</h1>
         <Layout style={{height: 250, width: 800}}>
-          <Header className="header">header</Header>
-          <Content className="content">content</Content>
-          <Footer className="footer">footer</Footer>
+          <Header className="e-header">header</Header>
+          <Content className="e-content">content</Content>
+          <Footer className="e-footer">footer</Footer>
         </Layout>
       </div>
 
       <div>
         <h1>example 2</h1>
         <Layout style={{height: 250, width: 800}}>
-          <Header className="header">header</Header>
+          <Header className="e-header">header</Header>
           <Layout>
-            <Aside className="aside">aside</Aside>
-            <Content className="content">content</Content>
+            <Aside className="e-aside">aside</Aside>
+            <Content className="e-content">content</Content>
           </Layout>
-          <Footer className="footer">footer</Footer>
+          <Footer className="e-footer">footer</Footer>
         </Layout>
       </div>
 
       <div>
         <h1>example 3</h1>
         <Layout style={{height: 250, width: 800}}>
-          <Header className="header">header</Header>
+          <Header className="e-header">header</Header>
           <Layout>
-            <Content className="content">content</Content>
-            <Aside className="aside">aside</Aside>
+            <Content className="e-content">content</Content>
+            <Aside className="e-aside">aside</Aside>
           </Layout>
-          <Footer className="footer">footer</Footer>
+          <Footer className="e-footer">footer</Footer>
         </Layout>
       </div>
 
       <div>
         <h1>example 4</h1>
         <Layout style={{height: 250, width: 800}}>
-          <Aside className="aside">aside</Aside>
+          <Aside className="e-aside">aside</Aside>
           <Layout>
-            <Header className="header">header</Header>
-            <Content className="content">content</Content>
-            <Footer className="footer">footer</Footer>
+            <Header className="e-header">header</Header>
+            <Content className="e-content">content</Content>
+            <Footer className="e-footer">footer</Footer>
           </Layout>
         </Layout>
       </div>
