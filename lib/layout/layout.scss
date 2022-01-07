@@ -6,7 +6,6 @@
 
   &-content {
     flex-grow: 1;
-
   }
 
   & & {
@@ -16,8 +15,17 @@
 
   &-hasAside {
     flex-direction: row;
+
     .hugsyui-layout {
       flex-direction: column;
+
+      &-hasAside {
+        flex-direction: row;
+
+        .hugsyui-layout {
+          flex-direction: column;
+        }
+      }
     }
   }
 }
