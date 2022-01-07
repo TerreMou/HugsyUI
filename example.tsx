@@ -1,20 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
-import {IconExample} from './lib/icon/icon.example';
 import {ButtonExample} from './lib/button/button.example';
 import {DialogExample} from './lib/dialog/dialog.example';
 import {LayoutExample} from './lib/layout/layout.example';
 import {Aside, Content, Footer, Header, Layout} from './lib/layout/layout';
 import './example.scss';
+import {IconDemo} from './lib/icon/icon.demo';
 
-const x = require('!!raw-loader!./lib/icon/icon.example.tsx');
-console.log(x.default);
 const logo = require('./logo.png');
 
 ReactDOM.render(
   <Router>
-    <Layout className="page">
+    <Layout className="site-page">
       <Header className="site-header">
         <div className="logo">
           <img src={logo} width="72" height="72" alt=""/>
@@ -40,7 +38,7 @@ ReactDOM.render(
           </ul>
         </Aside>
         <Content className="site-main">
-          <Route path="/icon" component={IconExample}/>
+          <Route path="/icon" component={IconDemo}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
